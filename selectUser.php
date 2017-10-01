@@ -36,7 +36,7 @@ if($status==false){
       }else{
           $view .= '<td>無効</td>';
       }
-      $view .= '<td>'.$result["life_flg"].'</td>';
+//      $view .= '<td>'.$result["life_flg"].'</td>';
       $view .= '<td><a href="deleteUser.php?id='.$result["id"].'">(削除)</a></td>';
       $view .= '</tr>';
   }
@@ -49,6 +49,8 @@ if($status==false){
     <head>
         <meta charset="UTF-8">
         <title>ユーザー一覧</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/bookmgt.css">
     </head>
 
     <body>

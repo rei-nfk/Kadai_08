@@ -39,6 +39,8 @@ if($status==false){
     <head>
         <meta charset="UTF-8">
         <title>本の一覧</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/bookmgt.css">
     </head>
 
     <body>
