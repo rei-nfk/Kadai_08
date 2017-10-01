@@ -7,7 +7,7 @@ try {
 }
 
 //２．データ登録SQL作成
-$stmt = $pdo->prepare("SELECT * FROM gs_bm_table");
+$stmt = $pdo->prepare("SELECT * FROM gs_user_table");
 $status = $stmt->execute();
 
 //３．データ表示
@@ -21,13 +21,23 @@ if($status==false){
   while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
       $view .= '<tr>';
       
-      $view .= '<td><a href="detailBook.php?id='.$result["id"].'">'.$result["id"].'</a></td>';
-      $view .= '<td>'.$result["bookName"].'</td>';
-      $view .= '<td>'.$result["bookUrl"].'</td>';
-      $view .= '<td>'.$result["bookComment"].'</td>';
-      $view .= '<td>'.$result["regBookDate"].'</td>';
-      $view .= '<td>'.$result["regUser"].'</td>';
-      $view .= '<td><a href="deleteBook.php?id='.$result["id"].'">(削除)</a></td>';
+      $view .= '<td><a href="detailUser.php?id='.$result["id"].'">'.$result["id"].'</a></td>';
+      $view .= '<td>'.$result["userName"].'</td>';
+      $view .= '<td>'.$result["lid"].'</td>';
+      $view .= '<td>'.$result["lpw"].'</td>';
+//      $view .= '<td>'.$result["kanri_flg"].'</td>';
+      if($result["kanri_flg"]==0){
+          $view .= '<td>一般ユーザー</td>';
+      }else{
+          $view .= '<td>特権管理者</td>';
+      }
+      if($result["life_flg"]==0){
+          $view .= '<td>有効</td>';
+      }else{
+          $view .= '<td>無効</td>';
+      }
+      $view .= '<td>'.$result["life_flg"].'</td>';
+      $view .= '<td><a href="deleteUser.php?id='.$result["id"].'">(削除)</a></td>';
       $view .= '</tr>';
   }
 }
@@ -38,13 +48,13 @@ if($status==false){
     <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>本の一覧</title>
+        <title>ユーザー一覧</title>
     </head>
 
     <body>
         <div id="wrapper">
             <header>
-                <h1>登録書籍一覧</h1>
+                <h1>ユーザー一覧</h1>
             </header>
             <nav>
                 <ul>
@@ -58,11 +68,11 @@ if($status==false){
                 <table>
                     <tr>
                         <th>id</th>
-                        <th>書籍名</th>
-                        <th>書籍URL</th>
-                        <th>コメント</th>
-                        <th>登録日時</th>
-                        <th>社員</th>
+                        <th>氏名</th>
+                        <th>ID</th>
+                        <th>PW</th>
+                        <th>権限</th>
+                        <th>有効/無効</th>
                         <th>削除</th>
                     </tr>
                     <?=$view?>
