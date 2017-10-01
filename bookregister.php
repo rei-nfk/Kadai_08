@@ -11,6 +11,14 @@
         <header>
             <h1>本を登録しましょう!</h1>
         </header>
+        <nav>
+            <ul>
+                <li><a href="selectBook.php">登録書籍一覧</a></li>
+                <li><a href="bookregister.php">書籍登録</a></li>
+                <li><a href="selectUser.php">登録ユーザー一覧</a></li>
+                <li><a href="userregister.php">ユーザー登録</a></li>
+            </ul>
+        </nav>
         <section>
             <form method="post" action="insertBook.php">
                 <fieldset>
