@@ -56,6 +56,7 @@ if($status==false){
     <body>
         <div id="wrapper">
             <header>
+                <p><a href="login.php">ログアウト</a></p>
                 <h1>ユーザー一覧</h1>
             </header>
             <nav>

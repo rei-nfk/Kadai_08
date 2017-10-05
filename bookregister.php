@@ -11,6 +11,7 @@
 <body>
     <div id="wrapper">
         <header>
+            <p><a href="login.php">ログアウト</a></p>
             <h1>本を登録しましょう!</h1>
         </header>
         <nav>
@@ -25,8 +26,8 @@
             <form method="post" action="insertBook.php">
                 <fieldset>
                     <legend>本の情報</legend>
-                    <label>書籍名：<input type="text" name="bookName"></label><br>
-                    <label>URL：<input type="text" name="bookUrl"></label><br>
+                    <label>書籍名：  <input type="text" name="bookName"></label><br>
+                    <label>URL：    <input type="text" name="bookUrl"></label><br>
                     <label>コメント：<textArea name="bookComment" rows="4" cols="40"></textArea></label><br>
 <!--                    本当はここでログイン機能があって、自動で入力されるといい-->
                     <label>社員番号：<input type="text" name="regUser"></label><br>

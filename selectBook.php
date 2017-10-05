@@ -46,6 +46,7 @@ if($status==false){
     <body>
         <div id="wrapper">
             <header>
+                <p><a href="login.php">ログアウト</a></p>
                 <h1>登録書籍一覧</h1>
             </header>
             <nav>
@@ -64,7 +65,7 @@ if($status==false){
                         <th>書籍URL</th>
                         <th>コメント</th>
                         <th>登録日時</th>
-                        <th>社員</th>
+                        <th>登録者</th>
                         <th>削除</th>
                     </tr>
                     <?=$view?>

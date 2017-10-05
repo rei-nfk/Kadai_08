@@ -8,6 +8,13 @@ div#wrapper {
     margin:0 auto;
 }
 
+header{
+    margin:15px 0;
+}
+
+header>p{
+    text-align: right;
+}
 
 h1{
     text-align: center;
@@ -21,16 +28,59 @@ ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-left: dotted 2px #44BCFB;
 }
 li{
-    height: 50px;
+/*    height: 50px;*/
     color: #44BCFB;
 /*    border: solid 2px #44BCFB;*/
     width:25%;
     text-align: center;
+    border-right: dotted 2px #44BCFB;
 }
+
+section{
+    margin: 20px 0;
+}
+
 td,th{
     width: 10%;
     text-align: center;
-    border-bottom: solid 1px;
+    border-bottom: solid 1px #44BCFB;
+}
+
+th{
+    background-color: #3DA9E1;
+    color: white;
+}
+
+a:link{
+    color:blue;
+    text-decoration-line: underline;
+}
+
+/*ログイン画面用CSS*/
+div#loginscreen{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px auto;
+}
+
+
+div#loginscreen > a{
+    display: block;
+    line-height: 80px;
+    width: 35%;
+    text-align: center;
+    background-color: #44BCFB;
+    color: white;
+        
+}
+
+/*共通部品CSS*/
+li>a:link, li> a:visited{
+    line-height: 50px;
+    color:44BCFB;
+    text-decoration-line: none;
 }

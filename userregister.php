@@ -11,6 +11,7 @@
 <body>
     <div id="wrapper">
         <header>
+            <p><a href="login.php">ログアウト</a></p>
             <h1>ユーザーを登録しましょう!</h1>
         </header>
         <nav>

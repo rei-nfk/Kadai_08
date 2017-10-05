@@ -51,7 +51,7 @@ if($status==false){
             </ul>
         </nav>
         <section>
-            <form method="post" action="insertBook.php">
+            <form method="post" action="updateBook.php">
                 <fieldset>
                     <legend>本の情報</legend>
                     <label>書籍名：<input type="text" name="bookName" value="<?=$row["bookName"]?>"></label><br>
@@ -59,6 +59,7 @@ if($status==false){
                     <label>コメント：<textArea name="bookComment" rows="4" cols="40"><?=$row["bookComment"]?></textArea></label><br>
 <!--                    本当はここでログイン機能があって、自動で入力されるといい-->
                     <label>社員番号：<input type="text" name="regUser" value="<?=$row["regUser"]?>"></label><br>
+                    <input type="hidden" name="id" value="<?=$id?>">
                     <input type="submit" value="送信">
                 </fieldset>
             </form>

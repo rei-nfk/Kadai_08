@@ -51,27 +51,42 @@ if($status==false){
             </ul>
         </nav>
         <section>
-            <form method="post" action="insertBook.php">
+            <form method="post" action="updateUser.php">
                 <fieldset>
                     <legend>ユーザー情報</legend>
-                    <label>氏名：<input type="text" name="bookName" value="<?=$row["userName"]?>"></label><br>
-                    <label>ID：<input type="text" name="bookUrl" value="<?=$row["lid"]?>"></label><br>
-                    <label>PW：<input type="text" name="bookUrl" value="<?=$row["lpw"]?>"></label><br>
+                    <label>氏名：<input type="text" name="userName" value="<?=$row["userName"]?>"></label><br>
+                    <label>ID：<input type="text" name="lid" value="<?=$row["lid"]?>"></label><br>
+                    <label>PW：<input type="text" name="lpw" value="<?=$row["lpw"]?>"></label><br>
 <!--                    本当はここでログイン機能があって、自動で入力されるといい-->
                     <label>権限：
                         <?php
                             if($row["kanri_flg"]==0){
-                                $radio = 
+                                $radio_kanri = 
                                         '<input type="radio" name="kanri_flg" value="0" checked="checked">一般ユーザー
                                         <input type="radio" name="kanri_flg" value="1">特権管理者';
                             }else{
-                                $radio = 
+                                $radio_kanri = 
                                         '<input type="radio" name="kanri_flg" value="0">一般ユーザー
                                         <input type="radio" name="kanri_flg" value="1" checked="checked">特権管理者';
                             }
-                            echo $radio;
+                            echo $radio_kanri;
                         ?>
                     </label><br>
+                    <label>有効/無効：
+                        <?php
+                            if($row["life_flg"]==0){
+                                $radio_life = 
+                                        '<input type="radio" name="life_flg" value="0" checked="checked">有効
+                                        <input type="radio" name="life_flg" value="1">無効';
+                            }else{
+                                $radio_life = 
+                                        '<input type="radio" name="life_flg" value="0">有効
+                                        <input type="radio" name="life_flg" value="1" checked="checked">無効';
+                            }
+                            echo $radio_life;
+                        ?>
+                    </label><br>
+                    <input type="hidden" name="id" value="<?=$id?>">
                     <input type="submit" value="送信">
                 </fieldset>
             </form>
