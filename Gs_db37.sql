@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2017 年 10 月 01 日 18:20
+-- Generation Time: 2017 年 10 月 05 日 09:44
 -- サーバのバージョン： 5.6.21
 -- PHP Version: 5.6.3
 
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `gs_bm_table` (
 --
 
 INSERT INTO `gs_bm_table` (`id`, `bookName`, `bookUrl`, `bookComment`, `regBookDate`, `regUser`) VALUES
-(1, 'test', 'test', 'test', '2017-10-01 22:42:01', 1);
+(1, 'test', 'test', 'test3', '2017-10-01 22:42:01', 1);
 
 -- --------------------------------------------------------
 

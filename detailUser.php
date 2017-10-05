@@ -54,11 +54,11 @@ if($status==false){
             <form method="post" action="updateUser.php">
                 <fieldset>
                     <legend>ユーザー情報</legend>
-                    <label>氏名：<input type="text" name="userName" value="<?=$row["userName"]?>"></label><br>
-                    <label>ID：<input type="text" name="lid" value="<?=$row["lid"]?>"></label><br>
-                    <label>PW：<input type="text" name="lpw" value="<?=$row["lpw"]?>"></label><br>
+                    <label>氏名：</label><input type="text" name="userName" value="<?=$row["userName"]?>"><br>
+                    <label>ID：</label><input type="text" name="lid" value="<?=$row["lid"]?>"><br>
+                    <label>PW：</label><input type="text" name="lpw" value="<?=$row["lpw"]?>"><br>
 <!--                    本当はここでログイン機能があって、自動で入力されるといい-->
-                    <label>権限：
+                    <label>権限：</label>
                         <?php
                             if($row["kanri_flg"]==0){
                                 $radio_kanri = 
@@ -71,8 +71,8 @@ if($status==false){
                             }
                             echo $radio_kanri;
                         ?>
-                    </label><br>
-                    <label>有効/無効：
+                    <br>
+                    <label>有効/無効：</label>
                         <?php
                             if($row["life_flg"]==0){
                                 $radio_life = 
@@ -85,9 +85,9 @@ if($status==false){
                             }
                             echo $radio_life;
                         ?>
-                    </label><br>
+                    <br>
                     <input type="hidden" name="id" value="<?=$id?>">
-                    <input type="submit" value="送信">
+                    <input type="submit" value="送信"  id="submit">
                 </fieldset>
             </form>
         </section>

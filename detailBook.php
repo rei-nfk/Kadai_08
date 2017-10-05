@@ -54,13 +54,13 @@ if($status==false){
             <form method="post" action="updateBook.php">
                 <fieldset>
                     <legend>本の情報</legend>
-                    <label>書籍名：<input type="text" name="bookName" value="<?=$row["bookName"]?>"></label><br>
-                    <label>URL：<input type="text" name="bookUrl" value="<?=$row["bookUrl"]?>"></label><br>
-                    <label>コメント：<textArea name="bookComment" rows="4" cols="40"><?=$row["bookComment"]?></textArea></label><br>
+                    <label>書籍名：</label><input type="text" name="bookName" value="<?=$row["bookName"]?>"><br>
+                    <label>URL：</label><input type="text" name="bookUrl" value="<?=$row["bookUrl"]?>"><br>
+                    <label>コメント：</label><textArea name="bookComment" rows="4" cols="40"><?=$row["bookComment"]?></textArea><br>
 <!--                    本当はここでログイン機能があって、自動で入力されるといい-->
-                    <label>社員番号：<input type="text" name="regUser" value="<?=$row["regUser"]?>"></label><br>
+                    <label>社員番号：</label><input type="text" name="regUser" value="<?=$row["regUser"]?>"><br>
                     <input type="hidden" name="id" value="<?=$id?>">
-                    <input type="submit" value="送信">
+                    <input type="submit" value="送信" id="submit">
                 </fieldset>
             </form>
         </section>

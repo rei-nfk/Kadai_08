@@ -26,14 +26,14 @@
             <form method="post" action="insertUser.php">
                 <fieldset>
                     <legend>ユーザーの情報</legend>
-                    <label>氏名：<input type="text" name="userName"></label><br>
-                    <label>ID：<input type="text" name="lid"></label><br>
-                    <label>PW：<input type="text" name="lpw"></label><br>
+                    <label>氏名：</label><input type="text" name="userName"><br>
+                    <label>ID：</label><input type="text" name="lid"><br>
+                    <label>PW：</label><input type="text" name="lpw"><br>
                     <label>
-                        権限：<input type="radio" name="kanri_flg" value="0" checked="checked">一般ユーザー
+                        権限：</label><input type="radio" name="kanri_flg" value="0" checked="checked">一般ユーザー
                         <input type="radio" name="kanri_flg" value="1">特権管理者
-                    </label><br>
-                    <input type="submit" value="送信">
+                    <br>
+                    <input type="submit" value="送信" id="submit">
                 </fieldset>
             </form>
         </section>

@@ -84,3 +84,13 @@ li>a:link, li> a:visited{
     color:44BCFB;
     text-decoration-line: none;
 }
+input, textarea{
+    width:300px;
+}
+label{
+    display: block;
+    width: 500px;
+}
+input#submit{
+    width: 200px;
+}
